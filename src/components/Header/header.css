@@ -1,0 +1,91 @@
+:root{
+    /*colores*/
+    --primario: #254015;
+    --secundario: #cbb26a;
+    --primario-claro: #3B6622;
+    --secundario-claro: #d8c690;
+    --fondo:#fbedc2;
+    --negro: black;
+    --blanco: white;
+    --gris: cacaca; 
+    /*tamaño*/
+    --texto-base: 18px;
+
+    /*espacios*/
+    --s: 10px;
+    --m: 18px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+header{
+    background-image: url(https://images.unsplash.com/photo-1589487391730-58f20eb2c308?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80);
+    background-size: cover;
+    background-position: center;
+    color: var(--primario);
+}
+.button{
+    position: relative;
+    background-color: var(--primario-claro);
+    border: 2px solid var(--secundario);
+    border-radius: 24px;
+    color: var(--secundario);
+    padding: var(--m);
+    margin: 24px;
+}
+.carrito{
+    position: relative;
+    font-size: large;
+    color: var(--secundario);
+}
+.carrito.button{
+    background-color: var(--secundario);
+    width: 140px;
+    height: 80px;
+    border-radius: 24px;
+    border: 2px solid var(--primario);
+}
+a.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+.circule{
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+    border-radius: 50%;
+    font-size: large;
+    position:absolute;
+    width: 30px;
+    height: 30px;    
+}
+.container.header-inner a{
+    color: var(--primario);
+    font-size: var(--m);
+}
+header .header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+}
+.cabezera{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .header-inner{
+    display: flex;
+    justify-content: space-between;
+}
+input#buscar {
+    width: 30%;
+    padding: var(--s) var(--m);
+    font-size: large;
+}

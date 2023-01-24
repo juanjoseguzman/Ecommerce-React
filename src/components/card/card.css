@@ -1,0 +1,78 @@
+.botas-futbol-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 48px;
+}
+
+article{
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 8px 16px -2px gray;
+}
+p{
+    text-align: center;
+}
+
+.bota {
+    text-align: center;
+}
+.botones-card {
+    display: flex;
+    justify-content: space-evenly;
+}
+.rating {
+    display: flex;
+    justify-content: center;
+}
+p.filled {
+    font-size: 24px;
+    color: goldenrod;
+}
+p.filled-off{
+    font-size: 24px;
+    color: var(--secundario-claro);
+}
+a.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+.button{
+    position: relative;
+    background-color: var(--primario-claro);
+    border: 2px solid var(--secundario);
+    border-radius: 24px;
+    color: var(--secundario);
+    padding: var(--m);
+    margin: 24px;
+}
+.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+:root{
+    /*colores*/
+    --primario: #254015;
+    --secundario: #cbb26a;
+    --primario-claro: #3B6622;
+    --secundario-claro: #d8c690;
+    --fondo:#fbedc2;
+    --negro: black;
+    --blanco: white;
+    --gris: cacaca; 
+    /*tamaño*/
+    --texto-base: 18px;
+
+    /*espacios*/
+    --s: 10px;
+    --m: 18px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+.App {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}

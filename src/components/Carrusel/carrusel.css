@@ -1,0 +1,71 @@
+:root{
+    /*colores*/
+    --primario: #254015;
+    --secundario: #cbb26a;
+    --primario-claro: #3B6622;
+    --secundario-claro: #d8c690;
+    --fondo:#fbedc2;
+    --negro: black;
+    --blanco: white;
+    --gris: cacaca; 
+    /*tamaño*/
+    --texto-base: 18px;
+
+    /*espacios*/
+    --s: 10px;
+    --m: 18px;
+    --l: 24px;
+    --xl: 32px;
+    --xxl: 40px;
+}
+body{
+    background-color: var(--fondo);
+    font-family: 'Nunito', sans-serif;
+    color: var(--primario);
+}
+
+h1{font-size: 44.79px;}
+h2{font-size: 37.32px;}
+h3{font-size: 31.10px;}
+h4{font-size: 25.92px;}
+h5, .lead{font-size: 21.60px;}
+h6, p{font-size: 18.00px;}
+small{font-size: 15px;}
+
+
+h1{
+    display: inline-block;
+    color: var(--primario);
+}
+.button{
+    position: relative;
+    background-color: var(--primario-claro);
+    border: 2px solid var(--secundario);
+    border-radius: 24px;
+    color: var(--secundario);
+    padding: var(--m);
+    margin: 24px;
+}
+a.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+.button:hover{
+    color: var(--primario);
+    background-color: var(--secundario);
+    border: 2px solid var(--primario);
+}
+.ofertas{
+    background-image: url(https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    background-position: center;
+    color: var(--primario);
+}
+section.ofertas {
+    text-align: center;
+    height: 400px;
+}
+.carruselFutbol {
+    width: 1600px;
+}
