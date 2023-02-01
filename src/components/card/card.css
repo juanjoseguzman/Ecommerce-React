@@ -76,3 +76,9 @@ a.button:hover{
     display: flex;
     justify-content: space-around;
 }
+.tarjetasProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 160px;
+}

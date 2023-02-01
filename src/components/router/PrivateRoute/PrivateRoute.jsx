@@ -1,17 +1,17 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 import { useAuthContext } from "../../../Context/AuthContext";
 import Layout from "../../Layout";
 
-export default function PrivateRoute() {
-  const { auth } = useAuthContext();
-
-  if (!auth) {
-    return <Navigate to="/login" />;
-  }
-
-  return (
-    <div>
+export default function PrivateRoute({ allowedRoles }) {
+  const { dataToken } = useAuthContext();
+  console.log(dataToken);
+  return allowedRoles?.includes(dataToken.role) ? (
+    <>
       <Layout />
-    </div>
+    </>
+  ) : dataToken.email ? (
+    <Navigate to="/Unauthorization" />
+  ) : (
+    <Navigate to="/" />
   );
 }

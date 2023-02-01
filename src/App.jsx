@@ -13,33 +13,41 @@ import Cart from "./views/Cart/Cart";
 import Login from "./views/Login/Login";
 import Todos_Productos from "./views/Todos_Productos/Todos_Productos";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { AuthContextProvaider } from "./Context/AuthContext";
+import { AuthContextProvider } from "./Context/AuthContext";
 import PublicRoute from "./components/router/PublicRoute/PublicRoute";
 import PrivateRoute from "./components/router/PrivateRoute/PrivateRoute";
+import { ROLES } from "./components/const/roles";
+import Unauthorization from "./views/Unauthorization/Unauthorization";
 
 function App() {
   return (
     <>
-      <AuthContextProvaider>
+      <AuthContextProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
+              <Route path="Unauthorization" element={<Unauthorization />} />
             </Route>
             {/*Rutas Publicas*/}
             <Route path="/login" element={<PublicRoute />}>
               <Route index element={<Login />} />
             </Route>
             {/*Rutas Privadas*/}
-            <Route path="/u" element={<PrivateRoute />}>
-              <Route index element={<Todos_Productos />} />
-
-              <Route path="cart" element={<Cart />} />
-              <Route path="about" element={<About />} />
+            <Route
+              element={
+                <PrivateRoute allowedRoles={[ROLES.User, ROLES.Admin]} />
+              }
+            >
+              <Route path="/todosProductos" element={<Todos_Productos />} />
+            </Route>
+            <Route element={<PrivateRoute allowedRoles={[ROLES.Admin]} />}>
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/about" element={<About />} />
             </Route>
           </Routes>
         </BrowserRouter>
-      </AuthContextProvaider>
+      </AuthContextProvider>
     </>
   );
 }

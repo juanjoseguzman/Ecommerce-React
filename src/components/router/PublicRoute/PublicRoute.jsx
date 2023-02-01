@@ -6,7 +6,7 @@ export default function PublicRoute() {
   const { auth } = useAuthContext();
 
   if (auth) {
-    return <Navigate to="/u" />;
+    return <Navigate to="/" />;
   }
 
   return (

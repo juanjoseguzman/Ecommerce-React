@@ -35,7 +35,11 @@ function Card({ imagen, nombre, precio, moneda, marca }) {
     <div className="botas-futbol-1">
       <article>
         <figure>
-          <img src={imagen} alt="bota amarilla" width="300px" />
+          <img
+            src={`http://localhost:3000${imagen}`}
+            alt="bota amarilla"
+            width="300px"
+          />
         </figure>
         <div className="bota">
           <div className="nombre">

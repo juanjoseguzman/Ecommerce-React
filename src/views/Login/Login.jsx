@@ -1,4 +1,6 @@
 import { useState } from "react";
+import AdvancedForm from "../../components/AdvanceForm/AdvancedForm";
+import BasicForm from "../../components/BasicForm/BasicForm";
 import { useAuthContext } from "../../Context/AuthContext";
 import "./login.css";
 
@@ -35,6 +37,8 @@ export default function Login() {
       </form>
 
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+      <BasicForm />
+      <AdvancedForm />
     </>
   );
 }

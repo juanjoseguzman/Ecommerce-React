@@ -7,7 +7,7 @@ export const homeMenu = [
   {
     id: 2,
     label: "Todos los Productos",
-    path: "/u",
+    path: "/todosProductos",
   },
   {
     id: 3,
